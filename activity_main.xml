@@ -1,49 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.timin.mcanotes.MainActivity">
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
-
-    <LinearLayout
-        android:gravity="center_horizontal"
+    android:background="@drawable/back"
+    >
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/up">
+        android:layout_height="wrap_content"
+        android:text="MCA NOTES"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sp1"
+        >
+    </Spinner>
 
+    <Spinner
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sp2"
+        >
+    </Spinner>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fetch Pdf"
+        android:id="@+id/buttonFetchPdf"/>
 
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/sp1"
-            >
-        </Spinner>
-
-        <Spinner
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/sp2"
-            >
-        </Spinner>
-        <Button
-            android:id="@+id/buttonChoose"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Select" />
-
-
-
-
-        <Button
-            android:id="@+id/buttonUpload"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Upload" />
-
-    </LinearLayout>
-
+    <ListView
+        android:layout_width="match_parent"
+        android:id="@+id/listView"
+        android:layout_height="wrap_content">
+    </ListView>
 </LinearLayout>
+
+
+</RelativeLayout>
